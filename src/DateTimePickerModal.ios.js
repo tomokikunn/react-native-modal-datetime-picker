@@ -75,14 +75,6 @@ export class DateTimePickerModal extends React.PureComponent {
     return null;
   }
 
-  componentDidMount() {
-    if (this.props.isHeaderVisibleIOS) {
-      console.warn(
-        `Please notice that the built-in iOS header will not be supported anymore in the future. If you're still planning to show a header, it's recommended to provide your own header implementation using "customHeaderIOS" (which will continue to be supported).`
-      );
-    }
-  }
-
   handleCancel = () => {
     this.didPressConfirm = false;
     this.props.onCancel();
